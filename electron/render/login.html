@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'" />
+  <meta http-equiv="X-Content-Security-Policy" content="default-src 'self'; script-src 'self'" />
+  <title>LD Desktop</title>
+  <link href="css/login.css" rel="stylesheet">
+</head>
+
+<body>
+  <section class="login_panel">
+    <div class="header-bar"> <!-- draggable area -->
+      <!-- Server dropdown -->
+      <div class="serverDropdownWrap no-drag">
+        <select id="serverDropdown" class="serverDropdown">
+          <option value="https://lotteryscreen.app/">Live</option>
+          <option value="https://stage.lotteryscreen.app/">Stage</option>
+          <option value="https://beta.lotterydisplay.app/">Beta</option>
+          <option value="http://192.168.0.103:8000/">Local</option>
+        </select>
+        <div class="serverDropdownIcon">
+          <svg class="dropdown-icon" viewBox="0 0 20 20">
+            <path fill="#0000FF" d="M10 12a2 2 0 100-4 2 2 0 000 4z" />
+            <path fill="#0000FF" fill-rule="evenodd"
+              d="M10 18a8 8 0 100-16 8 8 0 000 16zm0-2a6 6 0 100-12 6 6 0 000 12zm-1-8a1 1 0 112 0v4a1 1 0 11-2 0v-4z"
+              clip-rule="evenodd" />
+          </svg>
+        </div>
+      </div>
+
+      <!-- Window controls -->
+      <div class="window-controls no-drag">
+        <button id="min-btn" class="window-btn" aria-label="Minimize">—</button>
+        <button id="max-btn" class="window-btn" aria-label="Maximize">▢</button>
+        <button id="close-btn" class="window-btn close" aria-label="Close">✕</button>
+      </div>
+    </div>
+
+    <div class="login-container">
+      <div class="login-box">
+        <div class="logo">
+          <img src="../../images/logo.svg" alt="Lottery Display Logo">
+        </div>
+
+        <div id="msg" class="msg"></div>
+
+        <!-- Email -->
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input id="email" type="email" name="email" autocomplete="username" required>
+        </div>
+
+        <!-- Password -->
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input id="password" type="password" name="password" autocomplete="current-password" required>
+        </div>
+
+        <!-- ✅ Remember me -->
+        <div class="form-group remember-me">
+          <label for="rememberMe">
+            <input type="checkbox" id="rememberMe"> Remember
+          </label>
+        </div>
+
+        <!-- Login -->
+        <button id="login_btn" class="btn-primary" type="submit">Login</button>
+
+        <div id="version" class="version-text"></div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div>&copy; 2025 Digital Lottery Display, LLC. | v1.0.0 | All Rights Reserved.</div>
+  </footer>
+
+  <!-- Important: keep only scripts that don't use require(), since nodeIntegration=false -->
+  <script src="js/login.js"></script>
+  <script src="js/windowControls.js"></script>
+  <!-- ✅ New script to handle remember-me -->
+  <script src="js/login-remember.js"></script>
+</body>
+
+</html>

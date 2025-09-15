@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'" />
+    <meta http-equiv="X-Content-Security-Policy" content="default-src 'self'; script-src 'self'" />
+    <title>LD Desktop</title>
+    <link href="css/homScreen.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="header">
+        <div class="header-container">
+            <div class="logo">
+                <a href="javascript:void(0);">
+                    <img src="../../images/logo-white.svg" alt="Lottery Display Pos Client">
+                </a>
+            </div>
+            <div class="logout">
+                <button id="btn_logout" class="logout-btn">Logout</button>
+                <div class="window-controls">
+                    <button id="min-btn" class="window-btn">—</button>
+                    <button id="max-btn" class="window-btn">▢</button>
+                    <button id="close-btn" class="window-btn">✕</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="display-listing">
+        <!-- 🔹 Original div commented out -->
+        <!-- <div id="display_list"></div> -->
+
+        <!-- 🔹 Fullscreen Scanner Controller -->
+        <div class="scanner-controller">
+            <h1 class="scanner-title">Welcome To Lottery Display Scanner</h1>
+
+            <!-- Dummy barcode -->
+            <div class="barcode">
+                <img src="../../images/barcode.gif" alt="Dummy Barcode">
+            </div>
+
+            <!-- Input Field -->
+            <div class="input-box">
+                <input type="text" autofocus="true" placeholder="Enter or scan barcode">
+            </div>
+
+            <!-- Instructions -->
+            <ul class="instructions">
+                <li>Connect your scanner to the system.</li>
+                <li>Scan above barcode to verify your scanner connection.</li>
+                <li>Barcode should be captured once connected successfully.</li>
+                <li>Scanned data will be processed automatically.</li>
+            </ul>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-text">&copy; 2025 Digital Lottery Display, LLC. | <span id="version"></span> | All Rights Reserved.
+        </div>
+    </footer>
+    
+    <script src="js/displayRenderer.js"></script>
+    <script src="js/renderer.js">
+    </script>
+</body>
+
+</html>

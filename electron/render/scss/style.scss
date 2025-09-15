@@ -1,0 +1,11 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/utilities';
+@import 'tailwindcss/components';
+
+
+.toggle_switch input:checked ~ .dot {
+    transform: translateX(100%);
+}
+.toggle_switch input:checked ~ .box {
+    background-color: rgb(59 130 246 / var(--tw-bg-opacity));
+}

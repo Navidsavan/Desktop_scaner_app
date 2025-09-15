@@ -1,0 +1,13 @@
+// On Watcher Ready
+watcher.on('ready', () => {
+    console.log('Initial scan complete. Watching for new files...');
+    ready = true;
+})
+// On File Delete
+watcher.on('unlink', (full_path) => {
+    console.log(`File ${full_path} has been removed`);
+});
+// On File Change
+watcher.on('change', (full_path) => {
+    console.log(`File ${full_path} has been change`);
+});
